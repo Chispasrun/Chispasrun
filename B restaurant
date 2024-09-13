@@ -1,0 +1,28 @@
+class Restaurant:
+    def __init__(self, name='', type='', rating=0.0, delivery=False):
+        self.name = name
+        self.type = type
+        self.rating = rating
+        self.delivery = delivery
+
+    def __str__(self):
+        return f"{self.name} - {self.type}, Rating: {self.rating}, Delivery: {'Yes' if self.delivery else 'No'}"
+
+    def display_info(self):
+        print(f"Restaurant Name: {self.name}")
+        print(f"Type: {self.type}")
+        print(f"Rating: {self.rating}")
+        print(f"Delivery Available: {'Yes' if self.delivery else 'No'}")
+        
+# Creating instances
+bobs_burgers = Restaurant('Bob\'s Burgers', 'American Diner', 4.2, False)
+katz_deli = Restaurant('Katz\'s Deli', 'Kosher Deli', 4.5, True)
+baekjeong = Restaurant('Baekjeong NYC', 'Korean BBQ', 4.4, False)
+
+# Displaying information
+print(bobs_burgers)
+print(katz_deli)
+print(baekjeong)
+
+# Or use the display_info method
+bobs_burgers.display_info()
